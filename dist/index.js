@@ -89,7 +89,7 @@ HeightMatchingGroup.propTypes = {
   tagName: _react.PropTypes.string
 };
 HeightMatchingGroup.defaultProps = {
-  selector: 'match-height',
+  selector: '.match-height',
   tagName: 'span'
 };
 exports.default = HeightMatchingGroup;

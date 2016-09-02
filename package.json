@@ -1,6 +1,6 @@
 {
   "name": "react-height-matching-group",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Matches the heights of contained elements based on provided selector string, responds with window resize",
   "main": "dist/index.js",
   "scripts": {
@@ -21,6 +21,10 @@
     "name": "Alex Howard",
     "email": "thezanke@gmail.com",
     "url": "www.thezanke.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thezanke/react-height-matching-group"
   },
   "license": "MIT",
   "peerDependencies": {
