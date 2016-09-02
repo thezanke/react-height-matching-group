@@ -10,7 +10,7 @@ export default class HeightMatchingGroup extends Component {
   }
 
   static defaultProps = {
-    selector: 'match-height',
+    selector: '.match-height',
     tagName: 'span',
   }
 

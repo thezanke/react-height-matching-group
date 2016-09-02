@@ -1,12 +1,12 @@
 {
   "name": "react-height-matching-group",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Matches the heights of contained elements based on provided selector string, responds with window resize",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "npm run clean && mkdir dist && npm run build",
     "dev": "npm run clean && babel index.js -w -o dist/index.js",
-    "build": "babel index.js --compact true --minified -o dist/index.js",
+    "build": "babel index.js -o dist/index.js",
     "clean": "rm -rf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,11 @@
     "matching",
     "automatic"
   ],
-  "author": "",
+  "author": {
+    "name": "Alex Howard",
+    "email": "thezanke@gmail.com",
+    "url": "www.thezanke.com"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react": ">= 15.x"
