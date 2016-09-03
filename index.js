@@ -21,11 +21,10 @@ export default class HeightMatchingGroup extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.matchHeights);
-    this.loadImages().then(this.matchHeights);
-    setTimeout(this.matchHeights, 0);
+    this.preloadAndRun();
   }
 
-  componentDidUpdate() { setTimeout(this.matchHeights, 0); }
+  componentDidUpdate() { this.preloadAndRun(); }
 
   componentWillUnmount() { window.removeEventListener('resize', this.matchHeights); }
 
@@ -51,6 +50,11 @@ export default class HeightMatchingGroup extends Component {
 
     return p;
   };
+
+  preloadAndRun = () => {
+    this.loadImages().then(this.matchHeights);
+    setTimeout(this.matchHeights, 0);
+  }
 
   matchHeights = () => {
     const els = this.container.querySelectorAll(this.props.selector);
