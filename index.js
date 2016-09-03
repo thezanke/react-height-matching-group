@@ -25,7 +25,7 @@ export default class HeightMatchingGroup extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.matchheights);
+    window.removeEventListener('resize', this.matchHeights);
   }
 
   getContainerRef = node => { this.container = node; }
@@ -33,15 +33,13 @@ export default class HeightMatchingGroup extends Component {
 
   matchHeights = () => {
     const els = this.container.querySelectorAll(this.props.selector);
+    els.forEach(el => { el.style.height = null; });
     const maxHeight = this.getMaxHeight(els);
     els.forEach(el => { el.style.height = `${maxHeight}px`; });
   }
 
   render = () => (
-    <this.RootTag
-      className={this.props.className}
-      ref={this.getContainerRef}
-    >
+    <this.RootTag className={this.props.className} ref={this.getContainerRef}>
       {this.props.children}
     </this.RootTag>
   )
