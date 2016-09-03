@@ -24,6 +24,10 @@ export default class HeightMatchingGroup extends Component {
     setTimeout(this.matchHeights, 0);
   }
 
+  componentDidUpdate() {
+    setTimeout(this.matchHeights, 0);
+  }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.matchHeights);
   }

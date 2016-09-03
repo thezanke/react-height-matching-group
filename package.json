@@ -1,6 +1,6 @@
 {
   "name": "react-height-matching-group",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Matches the heights of contained elements based on provided selector string, responds with window resize",
   "main": "dist/index.js",
   "scripts": {
